@@ -48,7 +48,7 @@ public class Main {
         final String QUERY_STRING = "/api/clues/";
 
 
-        //response from GET
+        //Store response from GET
         String responseStr1;
         String responseStr2;
         String responseStr3;
@@ -148,7 +148,6 @@ public class Main {
             //check answer  (userInput, question answer)
             checkIfCorrect(userAnswer1, answer1, points);
 
-
             //repeat above for question 2-10
             //question 2
             responseStr2 = CustomHttpClient.sendGET(BASE_URL + QUERY_STRING + getRandomIdNum());
@@ -163,7 +162,6 @@ public class Main {
 
             userAnswer2 = scanner.nextLine();
             checkIfCorrect(userAnswer2, answer2, points);
-
 
             //question 3
             responseStr3 = CustomHttpClient.sendGET(BASE_URL + QUERY_STRING + getRandomIdNum());
@@ -180,7 +178,6 @@ public class Main {
             userAnswer3 = scanner.nextLine();
             checkIfCorrect(userAnswer3, answer3, points);
 
-
             //question 4
             responseStr4 = CustomHttpClient.sendGET(BASE_URL + QUERY_STRING + getRandomIdNum());
             questionDTOObj = objectMapper.readValue(responseStr4, Clues.class);
@@ -195,7 +192,6 @@ public class Main {
 
             userAnswer4 = scanner.nextLine();
             checkIfCorrect(userAnswer4, answer4, points);
-
 
             //question 5
             responseStr5 = CustomHttpClient.sendGET(BASE_URL + QUERY_STRING + getRandomIdNum());
@@ -212,7 +208,6 @@ public class Main {
             userAnswer5 = scanner.nextLine();
             checkIfCorrect(userAnswer5, answer5, points);
 
-
             //question 6
             responseStr6 = CustomHttpClient.sendGET(BASE_URL + QUERY_STRING + getRandomIdNum());
             questionDTOObj = objectMapper.readValue(responseStr6, Clues.class);
@@ -228,7 +223,6 @@ public class Main {
             userAnswer6 = scanner.nextLine();
             checkIfCorrect(userAnswer6, answer6, points);
 
-
             //question 7
             responseStr7 = CustomHttpClient.sendGET(BASE_URL + QUERY_STRING + getRandomIdNum());
             questionDTOObj = objectMapper.readValue(responseStr7, Clues.class);
@@ -243,7 +237,6 @@ public class Main {
 
             userAnswer7 = scanner.nextLine();
             checkIfCorrect(userAnswer7, answer7, points);
-
 
             //question 8
             responseStr8 = CustomHttpClient.sendGET(BASE_URL + QUERY_STRING + getRandomIdNum());
@@ -275,7 +268,6 @@ public class Main {
             userAnswer9 = scanner.nextLine();
             checkIfCorrect(userAnswer9, answer9, points);
 
-
             //question 10
             responseStr10 = CustomHttpClient.sendGET(BASE_URL + QUERY_STRING + getRandomIdNum());
             questionDTOObj = objectMapper.readValue(responseStr10, Clues.class);
@@ -289,7 +281,6 @@ public class Main {
             System.out.println("Type your guess and press enter!");
 
             userAnswer10 = scanner.nextLine();
-
             checkIfCorrect(userAnswer10, answer10, points);
 
             //game over
