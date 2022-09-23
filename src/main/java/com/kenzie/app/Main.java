@@ -39,6 +39,7 @@ public class Main {
             System.out.println("Your Answer: " + userAnswer);
             System.out.println("Correct Answer: " + answer);
         }
+
     }
 
     public static void main(String[] args) throws IOException {
